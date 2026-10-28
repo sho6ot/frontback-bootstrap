@@ -1,0 +1,494 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Каталог — Зерно и помол</title>
+  <meta name="description" content="Каталог кофе в зёрнах, кофемолок, воронок и аксессуаров на Bootstrap-карточках с фильтром по категориям.">
+  <link
+    href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
+    rel="stylesheet"
+    integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB"
+    crossorigin="anonymous"
+  >
+  <link rel="stylesheet" href="css/custom.css">
+</head>
+<body>
+  <a class="visually-hidden-focusable" href="#main">Перейти к основному содержимому</a>
+
+  <header>
+    <div class="container-fluid bg-primary text-white small py-2">
+      <div class="container">
+        <div class="row align-items-center g-1">
+          <div class="col-12 col-md-8">
+            Свежая обжарка каждую неделю · бесплатная доставка от 5 000 ₽
+          </div>
+          <div class="col-12 col-md-4 text-md-end">
+            <a class="link-light link-underline-opacity-0 link-underline-opacity-75-hover fw-semibold" href="tel:+74950000000">+7 (495) 000-00-00</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top" aria-label="Основная навигация">
+    <div class="container">
+      <a class="navbar-brand d-flex align-items-center gap-2" href="index.html">
+          <svg class="brand-logo" viewBox="0 0 32 32" width="28" height="28" aria-hidden="true" focusable="false">
+            <ellipse cx="16" cy="16" rx="11" ry="14" transform="rotate(30 16 16)" fill="currentColor"/>
+            <path d="M10 25c6-4 6-14 12-18" fill="none" stroke="#2b211b" stroke-width="2.5" stroke-linecap="round"/>
+          </svg>
+        Зерно и помол
+      </a>
+      <button
+        class="navbar-toggler"
+        type="button"
+        data-bs-toggle="collapse"
+        data-bs-target="#mainNavbar"
+        aria-controls="mainNavbar"
+        aria-expanded="false"
+        aria-label="Переключить навигацию"
+      >
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="mainNavbar">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item">
+            <a class="nav-link" href="index.html">Главная</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="catalog.html">Каталог</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="product.html">Товар</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="order.html">Заявка</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="contacts.html">Контакты</a>
+          </li>
+          <li class="nav-item dropdown">
+            <a
+              class="nav-link dropdown-toggle"
+              href="#"
+              role="button"
+              data-bs-toggle="dropdown"
+              aria-expanded="false"
+            >
+              Категории
+            </a>
+            <ul class="dropdown-menu dropdown-menu-lg-end">
+              <li><a class="dropdown-item" href="catalog.html">Все товары</a></li>
+              <li><a class="dropdown-item" href="catalog.html#beans">Кофе в зёрнах</a></li>
+              <li><a class="dropdown-item" href="catalog.html#grinders">Кофемолки</a></li>
+              <li><a class="dropdown-item" href="catalog.html#brewers">Заваривание</a></li>
+              <li><a class="dropdown-item" href="catalog.html#accessories">Аксессуары</a></li>
+              <li><hr class="dropdown-divider"></li>
+              <li><a class="dropdown-item" href="index.html#popular">Популярное</a></li>
+            </ul>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <main id="main">
+    <div class="container my-5">
+      <nav aria-label="breadcrumb">
+        <ol class="breadcrumb">
+        <li class="breadcrumb-item"><a href="index.html">Главная</a></li>
+        <li class="breadcrumb-item active" aria-current="page">Каталог</li>
+        </ol>
+      </nav>
+
+      <div class="d-flex flex-wrap justify-content-between align-items-center gap-3 mb-4">
+        <h1 class="h2 mb-0">Каталог товаров</h1>
+        <a class="btn btn-outline-primary" href="order.html">Оставить заявку</a>
+      </div>
+
+      <div class="alert alert-info" role="alert">
+        Выберите категорию — список обновится сразу. Нажмите «Заказать», чтобы оформить быстрый заказ без перехода на другую страницу.
+      </div>
+
+      <div class="row g-4">
+        <aside class="col-12 col-lg-3" aria-label="Фильтры каталога">
+          <button
+            class="btn btn-outline-primary w-100 d-lg-none"
+            type="button"
+            data-bs-toggle="offcanvas"
+            data-bs-target="#catalogFilters"
+            aria-controls="catalogFilters"
+          >
+            Фильтры и категории
+          </button>
+
+          <div class="offcanvas-lg offcanvas-start catalog-sidebar" tabindex="-1" id="catalogFilters" aria-labelledby="catalogFiltersLabel">
+            <div class="offcanvas-header">
+              <h2 class="offcanvas-title h5" id="catalogFiltersLabel">Фильтры</h2>
+              <button type="button" class="btn-close" data-bs-dismiss="offcanvas" data-bs-target="#catalogFilters" aria-label="Закрыть"></button>
+            </div>
+            <div class="offcanvas-body">
+              <form class="card card-body w-100 shadow-sm" data-catalog-filter>
+                <fieldset>
+                  <legend class="h6">Категория</legend>
+                  <div class="btn-group-vertical w-100" role="group" aria-label="Категория товаров">
+                  <input type="radio" class="btn-check" name="category" id="category-all" value="all" autocomplete="off" checked>
+                  <label class="btn btn-outline-primary d-flex justify-content-between align-items-center" for="category-all">
+                    Все товары <span class="badge text-bg-light">9</span>
+                  </label>
+                  <input type="radio" class="btn-check" name="category" id="category-beans" value="beans" autocomplete="off">
+                  <label class="btn btn-outline-primary d-flex justify-content-between align-items-center" for="category-beans">
+                    Кофе в зёрнах <span class="badge text-bg-light">3</span>
+                  </label>
+                  <input type="radio" class="btn-check" name="category" id="category-grinders" value="grinders" autocomplete="off">
+                  <label class="btn btn-outline-primary d-flex justify-content-between align-items-center" for="category-grinders">
+                    Кофемолки <span class="badge text-bg-light">2</span>
+                  </label>
+                  <input type="radio" class="btn-check" name="category" id="category-brewers" value="brewers" autocomplete="off">
+                  <label class="btn btn-outline-primary d-flex justify-content-between align-items-center" for="category-brewers">
+                    Заваривание <span class="badge text-bg-light">2</span>
+                  </label>
+                  <input type="radio" class="btn-check" name="category" id="category-accessories" value="accessories" autocomplete="off">
+                  <label class="btn btn-outline-primary d-flex justify-content-between align-items-center" for="category-accessories">
+                    Аксессуары <span class="badge text-bg-light">2</span>
+                  </label>
+                  </div>
+                </fieldset>
+
+                <div class="form-check form-switch mt-3">
+                  <input class="form-check-input" type="checkbox" role="switch" id="filter-in-stock" name="in-stock">
+                  <label class="form-check-label" for="filter-in-stock">Только в наличии</label>
+                </div>
+
+                <button class="btn btn-primary mt-3 d-lg-none" type="button" data-bs-dismiss="offcanvas" data-bs-target="#catalogFilters">
+                  Показать товары
+                </button>
+              </form>
+            </div>
+          </div>
+        </aside>
+
+        <div class="col-12 col-lg-9">
+          <p class="text-muted mb-3" aria-live="polite">Найдено товаров: <span id="catalog-count">9</span></p>
+          <div class="row g-4">
+            <div class="col-12 col-md-6 col-xl-4" data-category="beans" data-stock="in">
+              <article class="card product-card h-100 shadow-sm">
+                <span class="badge text-bg-warning position-absolute top-0 start-0 m-3">Хит</span>
+                <img class="card-img-top" src="images/beans.svg" alt="" width="400" height="300" loading="lazy">
+                <div class="card-body d-flex flex-column">
+                  <p class="text-uppercase small fw-bold text-muted mb-1">Кофе в зёрнах</p>
+                  <h2 class="card-title h5">Эфиопия Иргачеффе</h2>
+                  <p class="card-text text-muted">Светлая обжарка, ноты бергамота и жасмина. 250 г.</p>
+                  <p class="fw-bold fs-5 mt-auto mb-3">890 ₽</p>
+                  <div class="d-flex flex-wrap gap-2">
+                    <a class="btn btn-primary" href="product.html">Подробнее</a>
+                    <button
+                      class="btn btn-outline-primary"
+                      type="button"
+                      data-bs-toggle="modal"
+                      data-bs-target="#orderModal"
+                      data-product="Эфиопия Иргачеффе"
+                    >
+                      Заказать
+                    </button>
+                  </div>
+                </div>
+              </article>
+            </div>
+            <div class="col-12 col-md-6 col-xl-4" data-category="beans" data-stock="in">
+              <article class="card product-card h-100 shadow-sm">
+                <span class="badge text-bg-danger position-absolute top-0 start-0 m-3">Скидка 13%</span>
+                <img class="card-img-top" src="images/beans.svg" alt="" width="400" height="300" loading="lazy">
+                <div class="card-body d-flex flex-column">
+                  <p class="text-uppercase small fw-bold text-muted mb-1">Кофе в зёрнах</p>
+                  <h2 class="card-title h5">Колумбия Супремо</h2>
+                  <p class="card-text text-muted">Средняя обжарка: карамель, орех, мягкая кислотность. 250 г.</p>
+                  <p class="fw-bold fs-5 mt-auto mb-3"><del class="text-muted fs-6 fw-normal me-2"><span class="visually-hidden">Старая цена: </span>790 ₽</del><span class="text-danger"><span class="visually-hidden">Новая цена: </span>690 ₽</span></p>
+                  <div class="d-flex flex-wrap gap-2">
+                    <a class="btn btn-primary" href="product.html">Подробнее</a>
+                    <button
+                      class="btn btn-outline-primary"
+                      type="button"
+                      data-bs-toggle="modal"
+                      data-bs-target="#orderModal"
+                      data-product="Колумбия Супремо"
+                    >
+                      Заказать
+                    </button>
+                  </div>
+                </div>
+              </article>
+            </div>
+            <div class="col-12 col-md-6 col-xl-4" data-category="beans" data-stock="in">
+              <article class="card product-card h-100 shadow-sm">
+                <img class="card-img-top" src="images/beans.svg" alt="" width="400" height="300" loading="lazy">
+                <div class="card-body d-flex flex-column">
+                  <p class="text-uppercase small fw-bold text-muted mb-1">Кофе в зёрнах</p>
+                  <h2 class="card-title h5">Бразилия Сантос</h2>
+                  <p class="card-text text-muted">Тёмная обжарка для эспрессо и турки: шоколад и орех. 1 кг.</p>
+                  <p class="fw-bold fs-5 mt-auto mb-3">2 490 ₽</p>
+                  <div class="d-flex flex-wrap gap-2">
+                    <a class="btn btn-primary" href="product.html">Подробнее</a>
+                    <button
+                      class="btn btn-outline-primary"
+                      type="button"
+                      data-bs-toggle="modal"
+                      data-bs-target="#orderModal"
+                      data-product="Бразилия Сантос"
+                    >
+                      Заказать
+                    </button>
+                  </div>
+                </div>
+              </article>
+            </div>
+            <div class="col-12 col-md-6 col-xl-4" data-category="grinders" data-stock="in">
+              <article class="card product-card h-100 shadow-sm">
+                <span class="badge text-bg-warning position-absolute top-0 start-0 m-3">Хит</span>
+                <img class="card-img-top" src="images/grinder.svg" alt="" width="400" height="300" loading="lazy">
+                <div class="card-body d-flex flex-column">
+                  <p class="text-uppercase small fw-bold text-muted mb-1">Кофемолки</p>
+                  <h2 class="card-title h5">Ручная кофемолка «Жернов»</h2>
+                  <p class="card-text text-muted">Стальные конические жернова, 30 ступеней помола.</p>
+                  <p class="fw-bold fs-5 mt-auto mb-3">3 990 ₽</p>
+                  <div class="d-flex flex-wrap gap-2">
+                    <a class="btn btn-primary" href="product.html">Подробнее</a>
+                    <button
+                      class="btn btn-outline-primary"
+                      type="button"
+                      data-bs-toggle="modal"
+                      data-bs-target="#orderModal"
+                      data-product="Ручная кофемолка «Жернов»"
+                    >
+                      Заказать
+                    </button>
+                  </div>
+                </div>
+              </article>
+            </div>
+            <div class="col-12 col-md-6 col-xl-4" data-category="grinders" data-stock="in">
+              <article class="card product-card h-100 shadow-sm">
+                <span class="badge text-bg-success position-absolute top-0 start-0 m-3">Новинка</span>
+                <img class="card-img-top" src="images/grinder.svg" alt="" width="400" height="300" loading="lazy">
+                <div class="card-body d-flex flex-column">
+                  <p class="text-uppercase small fw-bold text-muted mb-1">Кофемолки</p>
+                  <h2 class="card-title h5">Электрическая кофемолка «Помол-2»</h2>
+                  <p class="card-text text-muted">Жерновая, 40 ступеней, таймер дозировки.</p>
+                  <p class="fw-bold fs-5 mt-auto mb-3">7 490 ₽</p>
+                  <div class="d-flex flex-wrap gap-2">
+                    <a class="btn btn-primary" href="product.html">Подробнее</a>
+                    <button
+                      class="btn btn-outline-primary"
+                      type="button"
+                      data-bs-toggle="modal"
+                      data-bs-target="#orderModal"
+                      data-product="Электрическая кофемолка «Помол-2»"
+                    >
+                      Заказать
+                    </button>
+                  </div>
+                </div>
+              </article>
+            </div>
+            <div class="col-12 col-md-6 col-xl-4" data-category="brewers" data-stock="in">
+              <article class="card product-card h-100 shadow-sm">
+                <img class="card-img-top" src="images/brewer.svg" alt="" width="400" height="300" loading="lazy">
+                <div class="card-body d-flex flex-column">
+                  <p class="text-uppercase small fw-bold text-muted mb-1">Заваривание</p>
+                  <h2 class="card-title h5">Воронка V60, керамика</h2>
+                  <p class="card-text text-muted">Классика пуровера на 1–2 чашки, в комплекте 40 фильтров.</p>
+                  <p class="fw-bold fs-5 mt-auto mb-3">1 590 ₽</p>
+                  <div class="d-flex flex-wrap gap-2">
+                    <a class="btn btn-primary" href="product.html">Подробнее</a>
+                    <button
+                      class="btn btn-outline-primary"
+                      type="button"
+                      data-bs-toggle="modal"
+                      data-bs-target="#orderModal"
+                      data-product="Воронка V60, керамика"
+                    >
+                      Заказать
+                    </button>
+                  </div>
+                </div>
+              </article>
+            </div>
+            <div class="col-12 col-md-6 col-xl-4" data-category="brewers" data-stock="out">
+              <article class="card product-card product-card--sold-out h-100 shadow-sm">
+                <span class="badge text-bg-secondary position-absolute top-0 start-0 m-3">Нет в наличии</span>
+                <img class="card-img-top" src="images/brewer.svg" alt="" width="400" height="300" loading="lazy">
+                <div class="card-body d-flex flex-column">
+                  <p class="text-uppercase small fw-bold text-muted mb-1">Заваривание</p>
+                  <h2 class="card-title h5">Френч-пресс «Утро», 600 мл</h2>
+                  <p class="card-text text-muted">Боросиликатное стекло и двойной сетчатый фильтр.</p>
+                  <p class="fw-bold fs-5 mt-auto mb-3">1 890 ₽</p>
+                  <div class="d-flex flex-wrap gap-2">
+                    <a class="btn btn-primary" href="product.html">Подробнее</a>
+                    <button class="btn btn-outline-secondary" type="button" disabled>Нет в наличии</button>
+                  </div>
+                </div>
+              </article>
+            </div>
+            <div class="col-12 col-md-6 col-xl-4" data-category="accessories" data-stock="in">
+              <article class="card product-card h-100 shadow-sm">
+                <span class="badge text-bg-success position-absolute top-0 start-0 m-3">Новинка</span>
+                <img class="card-img-top" src="images/accessory.svg" alt="" width="400" height="300" loading="lazy">
+                <div class="card-body d-flex flex-column">
+                  <p class="text-uppercase small fw-bold text-muted mb-1">Аксессуары</p>
+                  <h2 class="card-title h5">Весы с таймером «Точность»</h2>
+                  <p class="card-text text-muted">Шаг 0,1 г и встроенный таймер для пуровера.</p>
+                  <p class="fw-bold fs-5 mt-auto mb-3">2 290 ₽</p>
+                  <div class="d-flex flex-wrap gap-2">
+                    <a class="btn btn-primary" href="product.html">Подробнее</a>
+                    <button
+                      class="btn btn-outline-primary"
+                      type="button"
+                      data-bs-toggle="modal"
+                      data-bs-target="#orderModal"
+                      data-product="Весы с таймером «Точность»"
+                    >
+                      Заказать
+                    </button>
+                  </div>
+                </div>
+              </article>
+            </div>
+            <div class="col-12 col-md-6 col-xl-4" data-category="accessories" data-stock="in">
+              <article class="card product-card h-100 shadow-sm">
+                <img class="card-img-top" src="images/accessory.svg" alt="" width="400" height="300" loading="lazy">
+                <div class="card-body d-flex flex-column">
+                  <p class="text-uppercase small fw-bold text-muted mb-1">Аксессуары</p>
+                  <h2 class="card-title h5">Чайник с гусиным носиком</h2>
+                  <p class="card-text text-muted">0,8 л, тонкий носик для точного пролива.</p>
+                  <p class="fw-bold fs-5 mt-auto mb-3">2 990 ₽</p>
+                  <div class="d-flex flex-wrap gap-2">
+                    <a class="btn btn-primary" href="product.html">Подробнее</a>
+                    <button
+                      class="btn btn-outline-primary"
+                      type="button"
+                      data-bs-toggle="modal"
+                      data-bs-target="#orderModal"
+                      data-product="Чайник с гусиным носиком"
+                    >
+                      Заказать
+                    </button>
+                  </div>
+                </div>
+              </article>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <footer class="bg-dark text-white pt-5 pb-4 mt-5">
+    <div class="container">
+      <div class="row g-4">
+        <div class="col-12 col-md-5">
+          <h2 class="h5">Зерно и помол</h2>
+          <p class="text-white-50 mb-0">
+            Учебный интернет-магазин кофе и оборудования для домашнего заваривания.
+          </p>
+        </div>
+        <nav class="col-6 col-md-3" aria-label="Разделы сайта">
+          <h2 class="h5">Разделы</h2>
+          <ul class="list-unstyled mb-0">
+            <li><a class="link-light link-opacity-75 link-opacity-100-hover" href="catalog.html">Каталог</a></li>
+            <li><a class="link-light link-opacity-75 link-opacity-100-hover" href="order.html">Оформить заявку</a></li>
+            <li><a class="link-light link-opacity-75 link-opacity-100-hover" href="order.html#delivery">Доставка</a></li>
+            <li><a class="link-light link-opacity-75 link-opacity-100-hover" href="contacts.html#faq">Вопросы и ответы</a></li>
+          </ul>
+        </nav>
+        <div class="col-6 col-md-4">
+          <h2 class="h5">Контакты</h2>
+          <address class="mb-0">
+            Москва, ул. Учебная, 1<br>
+            <a class="link-light link-opacity-75 link-opacity-100-hover" href="tel:+74950000000">+7 (495) 000-00-00</a><br>
+            <a class="link-light link-opacity-75 link-opacity-100-hover" href="mailto:hello@zerno.example">hello@zerno.example</a>
+          </address>
+        </div>
+      </div>
+      <hr class="border-secondary my-4">
+      <p class="small text-white-50 mb-0">&copy; 2026 Зерно и помол. Учебный проект на Bootstrap.</p>
+    </div>
+  </footer>
+
+  <div class="modal fade" id="orderModal" tabindex="-1" aria-labelledby="orderModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h2 class="modal-title h5" id="orderModalLabel">Быстрый заказ</h2>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Закрыть"></button>
+        </div>
+        <div class="modal-body">
+          <p class="text-muted">Оставьте имя и телефон — перезвоним и уточним детали заказа.</p>
+          <form
+            id="quickOrderForm"
+            class="needs-validation"
+            action="#"
+            method="post"
+            novalidate
+            data-success="Заявка на быстрый заказ принята! Перезвоним в течение 15 минут."
+          >
+            <div class="mb-3">
+              <label for="quick-product" class="form-label">Товар</label>
+              <input id="quick-product" name="product" type="text" class="form-control-plaintext fw-semibold" value="Консультация по выбору" readonly>
+            </div>
+            <div class="mb-3">
+              <label for="quick-name" class="form-label">Имя <span class="text-danger" aria-hidden="true">*</span></label>
+              <input id="quick-name" name="name" type="text" class="form-control" minlength="2" autocomplete="given-name" required>
+              <div class="invalid-feedback">Укажите имя — минимум 2 символа.</div>
+            </div>
+            <div class="mb-3">
+              <label for="quick-phone" class="form-label">Телефон <span class="text-danger" aria-hidden="true">*</span></label>
+              <div class="input-group has-validation">
+                <span class="input-group-text" id="quick-phone-prefix">+7</span>
+                <input
+                  id="quick-phone"
+                  name="phone"
+                  type="tel"
+                  class="form-control"
+                  inputmode="tel"
+                  autocomplete="tel-national"
+                  placeholder="900 123-45-67"
+                  pattern="\(?\d{3}\)?[\s\-]?\d{3}[\s\-]?\d{2}[\s\-]?\d{2}"
+                  aria-describedby="quick-phone-prefix quick-phone-hint" required
+                >
+                <div class="invalid-feedback">Введите 10 цифр номера, например 900 123-45-67.</div>
+              </div>
+              <div class="form-text" id="quick-phone-hint">Без +7, например 900 123-45-67.</div>
+            </div>
+            <div class="form-check">
+              <input id="quick-agree" name="agreement" class="form-check-input" type="checkbox" required>
+              <label class="form-check-label" for="quick-agree">Согласен на обработку персональных данных</label>
+              <div class="invalid-feedback">Без согласия заявку отправить нельзя.</div>
+            </div>
+          </form>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-outline-secondary" data-bs-dismiss="modal">Отмена</button>
+          <button type="submit" class="btn btn-primary" form="quickOrderForm">Отправить</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="toast-container position-fixed bottom-0 end-0 p-3">
+    <div id="successToast" class="toast align-items-center text-bg-success border-0" role="status" aria-live="polite" aria-atomic="true">
+      <div class="d-flex">
+        <div class="toast-body" id="successToastText">Заявка отправлена.</div>
+        <button type="button" class="btn-close btn-close-white me-2 m-auto" data-bs-dismiss="toast" aria-label="Закрыть"></button>
+      </div>
+    </div>
+  </div>
+
+  <script
+    src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+    crossorigin="anonymous">
+  </script>
+  <script src="js/main.js"></script>
+</body>
+</html>

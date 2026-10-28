@@ -65,6 +65,29 @@
           <li class="nav-item">
             <a class="nav-link" href="order.html">Заявка</a>
           </li>
+          <li class="nav-item">
+            <a class="nav-link" href="contacts.html">Контакты</a>
+          </li>
+          <li class="nav-item dropdown">
+            <a
+              class="nav-link dropdown-toggle"
+              href="#"
+              role="button"
+              data-bs-toggle="dropdown"
+              aria-expanded="false"
+            >
+              Категории
+            </a>
+            <ul class="dropdown-menu dropdown-menu-lg-end">
+              <li><a class="dropdown-item" href="catalog.html">Все товары</a></li>
+              <li><a class="dropdown-item" href="catalog.html#beans">Кофе в зёрнах</a></li>
+              <li><a class="dropdown-item" href="catalog.html#grinders">Кофемолки</a></li>
+              <li><a class="dropdown-item" href="catalog.html#brewers">Заваривание</a></li>
+              <li><a class="dropdown-item" href="catalog.html#accessories">Аксессуары</a></li>
+              <li><hr class="dropdown-divider"></li>
+              <li><a class="dropdown-item" href="index.html#popular">Популярное</a></li>
+            </ul>
+          </li>
         </ul>
       </div>
     </div>
@@ -123,64 +146,338 @@
       </div>
     </section>
 
+    <section class="container my-5" id="categories" aria-labelledby="categories-title">
+      <div class="d-flex flex-wrap justify-content-between align-items-center gap-2 mb-4">
+        <h2 class="mb-0" id="categories-title">Категории</h2>
+        <a class="link-primary fw-semibold" href="catalog.html">Весь каталог</a>
+      </div>
+      <div class="row g-3 g-md-4">
+        <div class="col-6 col-lg-3">
+          <div class="card category-card h-100 text-center shadow-sm">
+            <img class="card-img-top" src="images/beans.svg" alt="" width="400" height="300" loading="lazy">
+            <div class="card-body">
+              <h3 class="card-title h6 mb-1">
+                <a class="stretched-link link-dark link-underline-opacity-0" href="catalog.html#beans">Кофе в зёрнах</a>
+              </h3>
+              <p class="card-text small text-muted mb-0">3 товара</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-6 col-lg-3">
+          <div class="card category-card h-100 text-center shadow-sm">
+            <img class="card-img-top" src="images/grinder.svg" alt="" width="400" height="300" loading="lazy">
+            <div class="card-body">
+              <h3 class="card-title h6 mb-1">
+                <a class="stretched-link link-dark link-underline-opacity-0" href="catalog.html#grinders">Кофемолки</a>
+              </h3>
+              <p class="card-text small text-muted mb-0">2 товара</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-6 col-lg-3">
+          <div class="card category-card h-100 text-center shadow-sm">
+            <img class="card-img-top" src="images/brewer.svg" alt="" width="400" height="300" loading="lazy">
+            <div class="card-body">
+              <h3 class="card-title h6 mb-1">
+                <a class="stretched-link link-dark link-underline-opacity-0" href="catalog.html#brewers">Заваривание</a>
+              </h3>
+              <p class="card-text small text-muted mb-0">2 товара</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-6 col-lg-3">
+          <div class="card category-card h-100 text-center shadow-sm">
+            <img class="card-img-top" src="images/accessory.svg" alt="" width="400" height="300" loading="lazy">
+            <div class="card-body">
+              <h3 class="card-title h6 mb-1">
+                <a class="stretched-link link-dark link-underline-opacity-0" href="catalog.html#accessories">Аксессуары</a>
+              </h3>
+              <p class="card-text small text-muted mb-0">2 товара</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
     <section class="container my-5" id="popular" aria-labelledby="popular-title">
       <div class="d-flex flex-wrap justify-content-between align-items-center gap-2 mb-4">
         <h2 class="mb-0" id="popular-title">Популярные товары</h2>
         <a class="btn btn-outline-primary" href="catalog.html">Все товары</a>
       </div>
       <div class="row g-4">
-        <div class="col-12 col-md-6 col-lg-4">
-          <div class="border rounded h-100 p-4 bg-white d-flex flex-column">
-            <span class="badge bg-warning text-dark align-self-start mb-3">Хит</span>
-            <img class="img-fluid rounded mb-3" src="images/beans.svg" alt="" width="400" height="300" loading="lazy">
-            <h3 class="h5">Эфиопия Иргачеффе</h3>
-            <p class="text-muted">Светлая обжарка, ноты бергамота и жасмина. 250 г.</p>
-            <p class="fw-bold fs-5 mt-auto">890 ₽</p>
-            <a class="btn btn-primary align-self-start" href="product.html">Подробнее</a>
-          </div>
+        <div class="col-12 col-md-6 col-lg-4" data-category="beans" data-stock="in">
+          <article class="card product-card h-100 shadow-sm">
+            <span class="badge text-bg-warning position-absolute top-0 start-0 m-3">Хит</span>
+            <img class="card-img-top" src="images/beans.svg" alt="" width="400" height="300" loading="lazy">
+            <div class="card-body d-flex flex-column">
+              <p class="text-uppercase small fw-bold text-muted mb-1">Кофе в зёрнах</p>
+              <h3 class="card-title h5">Эфиопия Иргачеффе</h3>
+              <p class="card-text text-muted">Светлая обжарка, ноты бергамота и жасмина. 250 г.</p>
+              <p class="fw-bold fs-5 mt-auto mb-3">890 ₽</p>
+              <div class="d-flex flex-wrap gap-2">
+                <a class="btn btn-primary" href="product.html">Подробнее</a>
+                <button
+                  class="btn btn-outline-primary"
+                  type="button"
+                  data-bs-toggle="modal"
+                  data-bs-target="#orderModal"
+                  data-product="Эфиопия Иргачеффе"
+                >
+                  Заказать
+                </button>
+              </div>
+            </div>
+          </article>
         </div>
-        <div class="col-12 col-md-6 col-lg-4">
-          <div class="border rounded h-100 p-4 bg-white d-flex flex-column">
-            <span class="badge bg-warning text-dark align-self-start mb-3">Хит</span>
-            <img class="img-fluid rounded mb-3" src="images/grinder.svg" alt="" width="400" height="300" loading="lazy">
-            <h3 class="h5">Ручная кофемолка «Жернов»</h3>
-            <p class="text-muted">Стальные конические жернова, 30 ступеней помола.</p>
-            <p class="fw-bold fs-5 mt-auto">3 990 ₽</p>
-            <a class="btn btn-primary align-self-start" href="product.html">Подробнее</a>
-          </div>
+        <div class="col-12 col-md-6 col-lg-4" data-category="grinders" data-stock="in">
+          <article class="card product-card h-100 shadow-sm">
+            <span class="badge text-bg-warning position-absolute top-0 start-0 m-3">Хит</span>
+            <img class="card-img-top" src="images/grinder.svg" alt="" width="400" height="300" loading="lazy">
+            <div class="card-body d-flex flex-column">
+              <p class="text-uppercase small fw-bold text-muted mb-1">Кофемолки</p>
+              <h3 class="card-title h5">Ручная кофемолка «Жернов»</h3>
+              <p class="card-text text-muted">Стальные конические жернова, 30 ступеней помола.</p>
+              <p class="fw-bold fs-5 mt-auto mb-3">3 990 ₽</p>
+              <div class="d-flex flex-wrap gap-2">
+                <a class="btn btn-primary" href="product.html">Подробнее</a>
+                <button
+                  class="btn btn-outline-primary"
+                  type="button"
+                  data-bs-toggle="modal"
+                  data-bs-target="#orderModal"
+                  data-product="Ручная кофемолка «Жернов»"
+                >
+                  Заказать
+                </button>
+              </div>
+            </div>
+          </article>
         </div>
-        <div class="col-12 col-md-6 col-lg-4">
-          <div class="border rounded h-100 p-4 bg-white d-flex flex-column">
-            <span class="badge bg-success align-self-start mb-3">Новинка</span>
-            <img class="img-fluid rounded mb-3" src="images/accessory.svg" alt="" width="400" height="300" loading="lazy">
-            <h3 class="h5">Весы с таймером «Точность»</h3>
-            <p class="text-muted">Шаг 0,1 г и встроенный таймер для пуровера.</p>
-            <p class="fw-bold fs-5 mt-auto">2 290 ₽</p>
-            <a class="btn btn-primary align-self-start" href="product.html">Подробнее</a>
-          </div>
+        <div class="col-12 col-md-6 col-lg-4" data-category="accessories" data-stock="in">
+          <article class="card product-card h-100 shadow-sm">
+            <span class="badge text-bg-success position-absolute top-0 start-0 m-3">Новинка</span>
+            <img class="card-img-top" src="images/accessory.svg" alt="" width="400" height="300" loading="lazy">
+            <div class="card-body d-flex flex-column">
+              <p class="text-uppercase small fw-bold text-muted mb-1">Аксессуары</p>
+              <h3 class="card-title h5">Весы с таймером «Точность»</h3>
+              <p class="card-text text-muted">Шаг 0,1 г и встроенный таймер для пуровера.</p>
+              <p class="fw-bold fs-5 mt-auto mb-3">2 290 ₽</p>
+              <div class="d-flex flex-wrap gap-2">
+                <a class="btn btn-primary" href="product.html">Подробнее</a>
+                <button
+                  class="btn btn-outline-primary"
+                  type="button"
+                  data-bs-toggle="modal"
+                  data-bs-target="#orderModal"
+                  data-product="Весы с таймером «Точность»"
+                >
+                  Заказать
+                </button>
+              </div>
+            </div>
+          </article>
         </div>
       </div>
     </section>
+
+    <section class="container my-5" id="reviews" aria-labelledby="reviews-title">
+      <h2 class="text-center mb-4" id="reviews-title">Отзывы покупателей</h2>
+      <div id="reviewsCarousel" class="carousel carousel-dark slide reviews-carousel bg-light rounded-4" aria-label="Отзывы покупателей">
+        <div class="carousel-indicators">
+          <button
+            type="button"
+            data-bs-target="#reviewsCarousel"
+            data-bs-slide-to="0" class="active" aria-current="true"
+            aria-label="Отзыв 1"
+          ></button>
+          <button
+            type="button"
+            data-bs-target="#reviewsCarousel"
+            data-bs-slide-to="1"
+            aria-label="Отзыв 2"
+          ></button>
+          <button
+            type="button"
+            data-bs-target="#reviewsCarousel"
+            data-bs-slide-to="2"
+            aria-label="Отзыв 3"
+          ></button>
+        </div>
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <div class="row justify-content-center">
+              <figure class="col-10 col-lg-8 text-center mb-0">
+                <p class="text-warning fs-5 mb-2"><span aria-hidden="true">★★★★★</span><span class="visually-hidden">Оценка 5 из 5</span></p>
+                <blockquote class="blockquote">
+                  <p>Заказал Иргачеффе и воронку — в пачке была карточка с рецептом. Первый пуровер получился с первого раза.</p>
+                </blockquote>
+                <figcaption class="blockquote-footer mb-0">Алексей, Москва</figcaption>
+              </figure>
+            </div>
+          </div>
+          <div class="carousel-item">
+            <div class="row justify-content-center">
+              <figure class="col-10 col-lg-8 text-center mb-0">
+                <p class="text-warning fs-5 mb-2"><span aria-hidden="true">★★★★★</span><span class="visually-hidden">Оценка 5 из 5</span></p>
+                <blockquote class="blockquote">
+                  <p>Кофемолка «Жернов» мелет ровно, ручка не люфтит. По телефону помогли выбрать ступень под турку.</p>
+                </blockquote>
+                <figcaption class="blockquote-footer mb-0">Марина, Казань</figcaption>
+              </figure>
+            </div>
+          </div>
+          <div class="carousel-item">
+            <div class="row justify-content-center">
+              <figure class="col-10 col-lg-8 text-center mb-0">
+                <p class="text-warning fs-5 mb-2"><span aria-hidden="true">★★★★☆</span><span class="visually-hidden">Оценка 4 из 5</span></p>
+                <blockquote class="blockquote">
+                  <p>Доставка на следующий день, зерно свежее. Хотелось бы больше пачек по 1 кг.</p>
+                </blockquote>
+                <figcaption class="blockquote-footer mb-0">Игорь, Санкт-Петербург</figcaption>
+              </figure>
+            </div>
+          </div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#reviewsCarousel" data-bs-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Предыдущий отзыв</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#reviewsCarousel" data-bs-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Следующий отзыв</span>
+        </button>
+      </div>
+    </section>
+
+    <aside class="container my-5" aria-labelledby="promo-title">
+      <div class="bg-primary text-white rounded-4 p-4 p-lg-5">
+        <div class="row align-items-center g-3">
+          <div class="col-12 col-lg-8">
+            <h2 class="h3" id="promo-title">Не знаете, что выбрать?</h2>
+            <p class="mb-0">Оставьте заявку — бариста подберёт зерно и способ заваривания под ваш вкус.</p>
+          </div>
+          <div class="col-12 col-lg-4 text-lg-end">
+            <button
+              class="btn btn-light btn-lg"
+              type="button"
+              data-bs-toggle="modal"
+              data-bs-target="#orderModal"
+              data-product="Консультация по выбору"
+            >
+              Получить консультацию
+            </button>
+          </div>
+        </div>
+      </div>
+    </aside>
   </main>
 
-  <footer class="bg-dark text-white py-4 mt-5">
+  <footer class="bg-dark text-white pt-5 pb-4 mt-5">
     <div class="container">
-      <div class="row align-items-center g-3">
-        <div class="col-12 col-md-6">
-          <p class="mb-0">&copy; 2026 Зерно и помол. Учебный проект на Bootstrap.</p>
+      <div class="row g-4">
+        <div class="col-12 col-md-5">
+          <h2 class="h5">Зерно и помол</h2>
+          <p class="text-white-50 mb-0">
+            Учебный интернет-магазин кофе и оборудования для домашнего заваривания.
+          </p>
         </div>
-        <div class="col-12 col-md-6 text-md-end">
-          <a class="link-light link-opacity-75 link-opacity-100-hover link-underline-opacity-0 me-3" href="catalog.html">Каталог</a>
-          <a class="link-light link-opacity-75 link-opacity-100-hover link-underline-opacity-0 me-3" href="order.html">Заявка</a>
+        <nav class="col-6 col-md-3" aria-label="Разделы сайта">
+          <h2 class="h5">Разделы</h2>
+          <ul class="list-unstyled mb-0">
+            <li><a class="link-light link-opacity-75 link-opacity-100-hover" href="catalog.html">Каталог</a></li>
+            <li><a class="link-light link-opacity-75 link-opacity-100-hover" href="order.html">Оформить заявку</a></li>
+            <li><a class="link-light link-opacity-75 link-opacity-100-hover" href="order.html#delivery">Доставка</a></li>
+            <li><a class="link-light link-opacity-75 link-opacity-100-hover" href="contacts.html#faq">Вопросы и ответы</a></li>
+          </ul>
+        </nav>
+        <div class="col-6 col-md-4">
+          <h2 class="h5">Контакты</h2>
+          <address class="mb-0">
+            Москва, ул. Учебная, 1<br>
+            <a class="link-light link-opacity-75 link-opacity-100-hover" href="tel:+74950000000">+7 (495) 000-00-00</a><br>
+            <a class="link-light link-opacity-75 link-opacity-100-hover" href="mailto:hello@zerno.example">hello@zerno.example</a>
+          </address>
+        </div>
+      </div>
+      <hr class="border-secondary my-4">
+      <p class="small text-white-50 mb-0">&copy; 2026 Зерно и помол. Учебный проект на Bootstrap.</p>
+    </div>
+  </footer>
+
+  <div class="modal fade" id="orderModal" tabindex="-1" aria-labelledby="orderModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h2 class="modal-title h5" id="orderModalLabel">Быстрый заказ</h2>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Закрыть"></button>
+        </div>
+        <div class="modal-body">
+          <p class="text-muted">Оставьте имя и телефон — перезвоним и уточним детали заказа.</p>
+          <form
+            id="quickOrderForm"
+            class="needs-validation"
+            action="#"
+            method="post"
+            novalidate
+            data-success="Заявка на быстрый заказ принята! Перезвоним в течение 15 минут."
+          >
+            <div class="mb-3">
+              <label for="quick-product" class="form-label">Товар</label>
+              <input id="quick-product" name="product" type="text" class="form-control-plaintext fw-semibold" value="Консультация по выбору" readonly>
+            </div>
+            <div class="mb-3">
+              <label for="quick-name" class="form-label">Имя <span class="text-danger" aria-hidden="true">*</span></label>
+              <input id="quick-name" name="name" type="text" class="form-control" minlength="2" autocomplete="given-name" required>
+              <div class="invalid-feedback">Укажите имя — минимум 2 символа.</div>
+            </div>
+            <div class="mb-3">
+              <label for="quick-phone" class="form-label">Телефон <span class="text-danger" aria-hidden="true">*</span></label>
+              <div class="input-group has-validation">
+                <span class="input-group-text" id="quick-phone-prefix">+7</span>
+                <input
+                  id="quick-phone"
+                  name="phone"
+                  type="tel"
+                  class="form-control"
+                  inputmode="tel"
+                  autocomplete="tel-national"
+                  placeholder="900 123-45-67"
+                  pattern="\(?\d{3}\)?[\s\-]?\d{3}[\s\-]?\d{2}[\s\-]?\d{2}"
+                  aria-describedby="quick-phone-prefix quick-phone-hint" required
+                >
+                <div class="invalid-feedback">Введите 10 цифр номера, например 900 123-45-67.</div>
+              </div>
+              <div class="form-text" id="quick-phone-hint">Без +7, например 900 123-45-67.</div>
+            </div>
+            <div class="form-check">
+              <input id="quick-agree" name="agreement" class="form-check-input" type="checkbox" required>
+              <label class="form-check-label" for="quick-agree">Согласен на обработку персональных данных</label>
+              <div class="invalid-feedback">Без согласия заявку отправить нельзя.</div>
+            </div>
+          </form>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-outline-secondary" data-bs-dismiss="modal">Отмена</button>
+          <button type="submit" class="btn btn-primary" form="quickOrderForm">Отправить</button>
         </div>
       </div>
     </div>
-  </footer>
+  </div>
+
+  <div class="toast-container position-fixed bottom-0 end-0 p-3">
+    <div id="successToast" class="toast align-items-center text-bg-success border-0" role="status" aria-live="polite" aria-atomic="true">
+      <div class="d-flex">
+        <div class="toast-body" id="successToastText">Заявка отправлена.</div>
+        <button type="button" class="btn-close btn-close-white me-2 m-auto" data-bs-dismiss="toast" aria-label="Закрыть"></button>
+      </div>
+    </div>
+  </div>
 
   <script
     src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
     integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
     crossorigin="anonymous">
   </script>
+  <script src="js/main.js"></script>
 </body>
 </html>
