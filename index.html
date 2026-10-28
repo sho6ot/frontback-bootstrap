@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Главная — Зерно и помол</title>
+  <meta name="description" content="Учебный интернет-магазин кофе и оборудования на Bootstrap: свежая обжарка, кофемолки и аксессуары.">
+  <link
+    href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
+    rel="stylesheet"
+    integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB"
+    crossorigin="anonymous"
+  >
+  <link rel="stylesheet" href="css/custom.css">
+</head>
+<body>
+  <a class="visually-hidden-focusable" href="#main">Перейти к основному содержимому</a>
+
+  <header>
+    <div class="container-fluid bg-primary text-white small py-2">
+      <div class="container">
+        <div class="row align-items-center g-1">
+          <div class="col-12 col-md-8">
+            Свежая обжарка каждую неделю · бесплатная доставка от 5 000 ₽
+          </div>
+          <div class="col-12 col-md-4 text-md-end">
+            <a class="link-light link-underline-opacity-0 link-underline-opacity-75-hover fw-semibold" href="tel:+74950000000">+7 (495) 000-00-00</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top" aria-label="Основная навигация">
+    <div class="container">
+      <a class="navbar-brand d-flex align-items-center gap-2" href="index.html">
+          <svg class="brand-logo" viewBox="0 0 32 32" width="28" height="28" aria-hidden="true" focusable="false">
+            <ellipse cx="16" cy="16" rx="11" ry="14" transform="rotate(30 16 16)" fill="currentColor"/>
+            <path d="M10 25c6-4 6-14 12-18" fill="none" stroke="#2b211b" stroke-width="2.5" stroke-linecap="round"/>
+          </svg>
+        Зерно и помол
+      </a>
+      <button
+        class="navbar-toggler"
+        type="button"
+        data-bs-toggle="collapse"
+        data-bs-target="#mainNavbar"
+        aria-controls="mainNavbar"
+        aria-expanded="false"
+        aria-label="Переключить навигацию"
+      >
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="mainNavbar">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="index.html">Главная</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="catalog.html">Каталог</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="product.html">Товар</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="order.html">Заявка</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <main id="main">
+    <section class="container-fluid bg-light py-5" aria-labelledby="hero-title">
+      <div class="container">
+        <div class="row align-items-center g-4">
+          <div class="col-12 col-lg-6">
+            <p class="text-primary text-uppercase fw-bold small mb-2">Свежая обжарка каждую неделю</p>
+            <h1 class="display-5 fw-bold" id="hero-title">Всё для вкусного кофе дома</h1>
+            <p class="lead text-muted">
+              Зерно от небольших обжарщиков, кофемолки и аксессуары для заваривания.
+              Поможем подобрать помол и способ приготовления под ваш вкус.
+            </p>
+            <div class="d-flex flex-wrap gap-2">
+              <a class="btn btn-primary btn-lg" href="catalog.html">Перейти в каталог</a>
+              <a class="btn btn-outline-primary btn-lg" href="#popular">Популярные товары</a>
+            </div>
+          </div>
+          <div class="col-12 col-lg-6">
+            <img class="img-fluid rounded-4 shadow-sm" src="images/hero.svg" alt="" width="480" height="360">
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="container my-5" id="advantages" aria-labelledby="advantages-title">
+      <h2 class="text-center mb-4" id="advantages-title">Почему выбирают нас</h2>
+      <div class="row g-4">
+        <div class="col-12 col-md-6 col-lg-3">
+          <div class="p-4 border rounded h-100 bg-white">
+            <h3 class="h5">Свежая обжарка</h3>
+            <p class="mb-0 text-muted">Отправляем зерно не позже 7 дней после обжарки — дата указана на пачке.</p>
+          </div>
+        </div>
+        <div class="col-12 col-md-6 col-lg-3">
+          <div class="p-4 border rounded h-100 bg-white">
+            <h3 class="h5">Помол под ваш способ</h3>
+            <p class="mb-0 text-muted">Бесплатно смелем зерно под турку, пуровер, френч-пресс или эспрессо.</p>
+          </div>
+        </div>
+        <div class="col-12 col-md-6 col-lg-3">
+          <div class="p-4 border rounded h-100 bg-white">
+            <h3 class="h5">Проверенное оборудование</h3>
+            <p class="mb-0 text-muted">Продаём только то, чем пользуемся сами, гарантия до 2 лет.</p>
+          </div>
+        </div>
+        <div class="col-12 col-md-6 col-lg-3">
+          <div class="p-4 border rounded h-100 bg-white">
+            <h3 class="h5">Доставка за 1–2 дня</h3>
+            <p class="mb-0 text-muted">Курьер по Москве, пункты выдачи по России или самовывоз.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="container my-5" id="popular" aria-labelledby="popular-title">
+      <div class="d-flex flex-wrap justify-content-between align-items-center gap-2 mb-4">
+        <h2 class="mb-0" id="popular-title">Популярные товары</h2>
+        <a class="btn btn-outline-primary" href="catalog.html">Все товары</a>
+      </div>
+      <div class="row g-4">
+        <div class="col-12 col-md-6 col-lg-4">
+          <div class="border rounded h-100 p-4 bg-white d-flex flex-column">
+            <span class="badge bg-warning text-dark align-self-start mb-3">Хит</span>
+            <img class="img-fluid rounded mb-3" src="images/beans.svg" alt="" width="400" height="300" loading="lazy">
+            <h3 class="h5">Эфиопия Иргачеффе</h3>
+            <p class="text-muted">Светлая обжарка, ноты бергамота и жасмина. 250 г.</p>
+            <p class="fw-bold fs-5 mt-auto">890 ₽</p>
+            <a class="btn btn-primary align-self-start" href="product.html">Подробнее</a>
+          </div>
+        </div>
+        <div class="col-12 col-md-6 col-lg-4">
+          <div class="border rounded h-100 p-4 bg-white d-flex flex-column">
+            <span class="badge bg-warning text-dark align-self-start mb-3">Хит</span>
+            <img class="img-fluid rounded mb-3" src="images/grinder.svg" alt="" width="400" height="300" loading="lazy">
+            <h3 class="h5">Ручная кофемолка «Жернов»</h3>
+            <p class="text-muted">Стальные конические жернова, 30 ступеней помола.</p>
+            <p class="fw-bold fs-5 mt-auto">3 990 ₽</p>
+            <a class="btn btn-primary align-self-start" href="product.html">Подробнее</a>
+          </div>
+        </div>
+        <div class="col-12 col-md-6 col-lg-4">
+          <div class="border rounded h-100 p-4 bg-white d-flex flex-column">
+            <span class="badge bg-success align-self-start mb-3">Новинка</span>
+            <img class="img-fluid rounded mb-3" src="images/accessory.svg" alt="" width="400" height="300" loading="lazy">
+            <h3 class="h5">Весы с таймером «Точность»</h3>
+            <p class="text-muted">Шаг 0,1 г и встроенный таймер для пуровера.</p>
+            <p class="fw-bold fs-5 mt-auto">2 290 ₽</p>
+            <a class="btn btn-primary align-self-start" href="product.html">Подробнее</a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="bg-dark text-white py-4 mt-5">
+    <div class="container">
+      <div class="row align-items-center g-3">
+        <div class="col-12 col-md-6">
+          <p class="mb-0">&copy; 2026 Зерно и помол. Учебный проект на Bootstrap.</p>
+        </div>
+        <div class="col-12 col-md-6 text-md-end">
+          <a class="link-light link-opacity-75 link-opacity-100-hover link-underline-opacity-0 me-3" href="catalog.html">Каталог</a>
+          <a class="link-light link-opacity-75 link-opacity-100-hover link-underline-opacity-0 me-3" href="order.html">Заявка</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script
+    src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+    crossorigin="anonymous">
+  </script>
+</body>
+</html>

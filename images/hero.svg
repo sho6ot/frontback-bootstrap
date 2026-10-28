@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 360" width="480" height="360">
+  <rect width="480" height="360" rx="24" fill="#f7f1ea"/>
+  <circle cx="240" cy="190" r="130" fill="#efe3d3"/>
+  <path d="M205 92c-12 16 12 26 0 42M240 82c-12 16 12 26 0 42M275 92c-12 16 12 26 0 42" fill="none" stroke="#c9ad93" stroke-width="6" stroke-linecap="round"/>
+  <ellipse cx="240" cy="276" rx="124" ry="18" fill="#d8c3ad"/>
+  <path d="M320 182h14a26 26 0 0 1 0 52h-20" fill="none" stroke="#8a4b24" stroke-width="12"/>
+  <path d="M160 160h160v50a70 70 0 0 1-70 70h-20a70 70 0 0 1-70-70z" fill="#8a4b24"/>
+  <ellipse cx="240" cy="160" rx="80" ry="12" fill="#653516"/>
+  <g fill="#653516">
+    <ellipse cx="84" cy="292" rx="17" ry="12" transform="rotate(-25 84 292)"/>
+    <ellipse cx="116" cy="310" rx="17" ry="12" transform="rotate(15 116 310)"/>
+    <ellipse cx="392" cy="300" rx="17" ry="12" transform="rotate(30 392 300)"/>
+  </g>
+  <g fill="none" stroke="#f7f1ea" stroke-width="3" stroke-linecap="round">
+    <path d="M74 298c8-4 12-8 20-12"/>
+    <path d="M106 306c8 0 14 4 20 8"/>
+    <path d="M382 294c8 2 14 6 20 12"/>
+  </g>
+</svg>
