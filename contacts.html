@@ -1,0 +1,342 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Контакты — Зерно и помол</title>
+  <meta name="description" content="Адрес шоурума, телефон, часы работы, форма обратной связи и ответы на частые вопросы.">
+  <link
+    href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
+    rel="stylesheet"
+    integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB"
+    crossorigin="anonymous"
+  >
+  <link rel="stylesheet" href="css/custom.css">
+</head>
+<body>
+  <a class="visually-hidden-focusable" href="#main">Перейти к основному содержимому</a>
+
+  <header>
+    <div class="container-fluid bg-primary text-white small py-2">
+      <div class="container">
+        <div class="row align-items-center g-1">
+          <div class="col-12 col-md-8">
+            Свежая обжарка каждую неделю · бесплатная доставка от 5 000 ₽
+          </div>
+          <div class="col-12 col-md-4 text-md-end">
+            <a class="link-light link-underline-opacity-0 link-underline-opacity-75-hover fw-semibold" href="tel:+74950000000">+7 (495) 000-00-00</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top" aria-label="Основная навигация">
+    <div class="container">
+      <a class="navbar-brand d-flex align-items-center gap-2" href="index.html">
+          <svg class="brand-logo" viewBox="0 0 32 32" width="28" height="28" aria-hidden="true" focusable="false">
+            <ellipse cx="16" cy="16" rx="11" ry="14" transform="rotate(30 16 16)" fill="currentColor"/>
+            <path d="M10 25c6-4 6-14 12-18" fill="none" stroke="#2b211b" stroke-width="2.5" stroke-linecap="round"/>
+          </svg>
+        Зерно и помол
+      </a>
+      <button
+        class="navbar-toggler"
+        type="button"
+        data-bs-toggle="collapse"
+        data-bs-target="#mainNavbar"
+        aria-controls="mainNavbar"
+        aria-expanded="false"
+        aria-label="Переключить навигацию"
+      >
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="mainNavbar">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item">
+            <a class="nav-link" href="index.html">Главная</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="catalog.html">Каталог</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="product.html">Товар</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="order.html">Заявка</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="contacts.html">Контакты</a>
+          </li>
+          <li class="nav-item dropdown">
+            <a
+              class="nav-link dropdown-toggle"
+              href="#"
+              role="button"
+              data-bs-toggle="dropdown"
+              aria-expanded="false"
+            >
+              Категории
+            </a>
+            <ul class="dropdown-menu dropdown-menu-lg-end">
+              <li><a class="dropdown-item" href="catalog.html">Все товары</a></li>
+              <li><a class="dropdown-item" href="catalog.html#beans">Кофе в зёрнах</a></li>
+              <li><a class="dropdown-item" href="catalog.html#grinders">Кофемолки</a></li>
+              <li><a class="dropdown-item" href="catalog.html#brewers">Заваривание</a></li>
+              <li><a class="dropdown-item" href="catalog.html#accessories">Аксессуары</a></li>
+              <li><hr class="dropdown-divider"></li>
+              <li><a class="dropdown-item" href="index.html#popular">Популярное</a></li>
+            </ul>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <main id="main">
+    <div class="container my-5">
+      <nav aria-label="breadcrumb">
+        <ol class="breadcrumb">
+        <li class="breadcrumb-item"><a href="index.html">Главная</a></li>
+        <li class="breadcrumb-item active" aria-current="page">Контакты</li>
+        </ol>
+      </nav>
+
+      <h1 class="h2">Контакты</h1>
+      <p class="lead text-muted mb-4">
+        Приходите в шоурум попробовать кофе или напишите нам — ответим в течение рабочего дня.
+      </p>
+
+      <div class="row g-4">
+        <div class="col-12 col-lg-5">
+          <div class="card shadow-sm h-100">
+            <div class="card-header bg-dark text-white">
+              <h2 class="h5 mb-0">Как связаться</h2>
+            </div>
+            <ul class="list-group list-group-flush">
+              <li class="list-group-item">
+                <span class="d-block small text-muted">Адрес шоурума</span>
+                Москва, ул. Учебная, 1, 2 этаж
+              </li>
+              <li class="list-group-item">
+                <span class="d-block small text-muted">Телефон</span>
+                <a href="tel:+74950000000">+7 (495) 000-00-00</a>
+              </li>
+              <li class="list-group-item">
+                <span class="d-block small text-muted">E-mail</span>
+                <a href="mailto:hello@zerno.example">hello@zerno.example</a>
+              </li>
+              <li class="list-group-item d-flex justify-content-between">
+                <span>Будни</span> <span class="fw-semibold">10:00–20:00</span>
+              </li>
+              <li class="list-group-item d-flex justify-content-between">
+                <span>Выходные</span> <span class="fw-semibold">11:00–18:00</span>
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="col-12 col-lg-7">
+          <div class="card shadow-sm">
+            <div class="card-body">
+              <h2 class="h5 card-title">Напишите нам</h2>
+              <p class="text-muted small">
+                Хотите купить товар? Удобнее через <a href="order.html">форму заявки</a>.
+              </p>
+              <form
+                id="feedbackForm"
+                class="needs-validation"
+                action="#"
+                method="post"
+                novalidate
+                data-success="Сообщение отправлено! Ответим на указанный e-mail."
+              >
+                <div class="row g-3">
+                  <div class="col-12 col-md-6">
+                    <label for="feedback-name" class="form-label">Имя <span class="text-danger" aria-hidden="true">*</span></label>
+                    <input id="feedback-name" name="name" type="text" class="form-control" minlength="2" autocomplete="name" required>
+                    <div class="invalid-feedback">Укажите имя — минимум 2 символа.</div>
+                  </div>
+                  <div class="col-12 col-md-6">
+                    <label for="feedback-email" class="form-label">E-mail <span class="text-danger" aria-hidden="true">*</span></label>
+                    <div class="input-group has-validation">
+                      <span class="input-group-text" aria-hidden="true">@</span>
+                      <input id="feedback-email" name="email" type="email" class="form-control" autocomplete="email" placeholder="example@mail.ru" required>
+                      <div class="invalid-feedback">Введите e-mail в формате name@example.ru.</div>
+                    </div>
+                  </div>
+                  <div class="col-12">
+                    <label for="feedback-topic" class="form-label">Тема <span class="text-danger" aria-hidden="true">*</span></label>
+                    <select id="feedback-topic" name="topic" class="form-select" required>
+                      <option value="" selected>Выберите тему</option>
+                      <option value="question">Вопрос о товаре</option>
+                      <option value="order">Статус заказа</option>
+                      <option value="wholesale">Оптовые закупки</option>
+                      <option value="other">Другое</option>
+                    </select>
+                    <div class="invalid-feedback">Выберите тему сообщения.</div>
+                  </div>
+                  <div class="col-12">
+                    <label for="feedback-message" class="form-label">Сообщение <span class="text-danger" aria-hidden="true">*</span></label>
+                    <textarea id="feedback-message" name="message" class="form-control" rows="4" minlength="10" maxlength="1000" required></textarea>
+                    <div class="invalid-feedback">Напишите сообщение — минимум 10 символов.</div>
+                  </div>
+                  <div class="col-12">
+                    <div class="form-check">
+                      <input id="feedback-agree" name="agreement" class="form-check-input" type="checkbox" required>
+                      <label class="form-check-label" for="feedback-agree">Я согласен на обработку персональных данных</label>
+                      <div class="invalid-feedback">Без согласия сообщение отправить нельзя.</div>
+                    </div>
+                  </div>
+                  <div class="col-12">
+                    <button class="btn btn-primary" type="submit">Отправить сообщение</button>
+                  </div>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <section class="container my-5" id="faq" aria-labelledby="faq-title">
+      <h2 class="h4 mb-3" id="faq-title">Вопросы и ответы</h2>
+      <div class="accordion" id="contactsFaq">
+        <div class="accordion-item">
+          <h3 class="accordion-header">
+            <button
+              class="accordion-button"
+              type="button"
+              data-bs-toggle="collapse"
+              data-bs-target="#contactsFaq-1"
+              aria-expanded="true"
+              aria-controls="contactsFaq-1"
+            >
+              Сколько хранится свежеобжаренное зерно?
+            </button>
+          </h3>
+          <div id="contactsFaq-1" class="accordion-collapse collapse show" data-bs-parent="#contactsFaq">
+            <div class="accordion-body">В закрытой пачке с клапаном — до 3 месяцев, после вскрытия лучше использовать за 3–4 недели.</div>
+          </div>
+        </div>
+        <div class="accordion-item">
+          <h3 class="accordion-header">
+            <button
+              class="accordion-button collapsed"
+              type="button"
+              data-bs-toggle="collapse"
+              data-bs-target="#contactsFaq-2"
+              aria-expanded="false"
+              aria-controls="contactsFaq-2"
+            >
+              Можно ли смолоть зерно при заказе?
+            </button>
+          </h3>
+          <div id="contactsFaq-2" class="accordion-collapse collapse" data-bs-parent="#contactsFaq">
+            <div class="accordion-body">Да, бесплатно. Укажите способ заваривания в комментарии к заявке — подберём помол.</div>
+          </div>
+        </div>
+        <div class="accordion-item">
+          <h3 class="accordion-header">
+            <button
+              class="accordion-button collapsed"
+              type="button"
+              data-bs-toggle="collapse"
+              data-bs-target="#contactsFaq-3"
+              aria-expanded="false"
+              aria-controls="contactsFaq-3"
+            >
+              Как выбрать кофемолку?
+            </button>
+          </h3>
+          <div id="contactsFaq-3" class="accordion-collapse collapse" data-bs-parent="#contactsFaq">
+            <div class="accordion-body">Для одной-двух чашек в день хватит ручной, для эспрессо и большой семьи удобнее электрическая жерновая.</div>
+          </div>
+        </div>
+        <div class="accordion-item">
+          <h3 class="accordion-header">
+            <button
+              class="accordion-button collapsed"
+              type="button"
+              data-bs-toggle="collapse"
+              data-bs-target="#contactsFaq-4"
+              aria-expanded="false"
+              aria-controls="contactsFaq-4"
+            >
+              Можно ли вернуть товар?
+            </button>
+          </h3>
+          <div id="contactsFaq-4" class="accordion-collapse collapse" data-bs-parent="#contactsFaq">
+            <div class="accordion-body">Оборудование — в течение 14 дней, если сохранены вид и упаковка. Вскрытое зерно вернуть нельзя.</div>
+          </div>
+        </div>
+        <div class="accordion-item">
+          <h3 class="accordion-header">
+            <button
+              class="accordion-button collapsed"
+              type="button"
+              data-bs-toggle="collapse"
+              data-bs-target="#contactsFaq-5"
+              aria-expanded="false"
+              aria-controls="contactsFaq-5"
+            >
+              Можно ли оформить заявку без регистрации?
+            </button>
+          </h3>
+          <div id="contactsFaq-5" class="accordion-collapse collapse" data-bs-parent="#contactsFaq">
+            <div class="accordion-body">Да, регистрация не нужна: достаточно имени и телефона или e-mail.</div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="bg-dark text-white pt-5 pb-4 mt-5">
+    <div class="container">
+      <div class="row g-4">
+        <div class="col-12 col-md-5">
+          <h2 class="h5">Зерно и помол</h2>
+          <p class="text-white-50 mb-0">
+            Учебный интернет-магазин кофе и оборудования для домашнего заваривания.
+          </p>
+        </div>
+        <nav class="col-6 col-md-3" aria-label="Разделы сайта">
+          <h2 class="h5">Разделы</h2>
+          <ul class="list-unstyled mb-0">
+            <li><a class="link-light link-opacity-75 link-opacity-100-hover" href="catalog.html">Каталог</a></li>
+            <li><a class="link-light link-opacity-75 link-opacity-100-hover" href="order.html">Оформить заявку</a></li>
+            <li><a class="link-light link-opacity-75 link-opacity-100-hover" href="order.html#delivery">Доставка</a></li>
+            <li><a class="link-light link-opacity-75 link-opacity-100-hover" href="contacts.html#faq">Вопросы и ответы</a></li>
+          </ul>
+        </nav>
+        <div class="col-6 col-md-4">
+          <h2 class="h5">Контакты</h2>
+          <address class="mb-0">
+            Москва, ул. Учебная, 1<br>
+            <a class="link-light link-opacity-75 link-opacity-100-hover" href="tel:+74950000000">+7 (495) 000-00-00</a><br>
+            <a class="link-light link-opacity-75 link-opacity-100-hover" href="mailto:hello@zerno.example">hello@zerno.example</a>
+          </address>
+        </div>
+      </div>
+      <hr class="border-secondary my-4">
+      <p class="small text-white-50 mb-0">&copy; 2026 Зерно и помол. Учебный проект на Bootstrap.</p>
+    </div>
+  </footer>
+
+  <div class="toast-container position-fixed bottom-0 end-0 p-3">
+    <div id="successToast" class="toast align-items-center text-bg-success border-0" role="status" aria-live="polite" aria-atomic="true">
+      <div class="d-flex">
+        <div class="toast-body" id="successToastText">Заявка отправлена.</div>
+        <button type="button" class="btn-close btn-close-white me-2 m-auto" data-bs-dismiss="toast" aria-label="Закрыть"></button>
+      </div>
+    </div>
+  </div>
+
+  <script
+    src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+    crossorigin="anonymous">
+  </script>
+  <script src="js/main.js"></script>
+</body>
+</html>

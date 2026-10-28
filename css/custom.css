@@ -65,6 +65,44 @@
   --bs-btn-disabled-border-color: #8a4b24;
 }
 
+/* Остальные компоненты, где цвет акцента задан внутри класса. */
+.dropdown-menu {
+  --bs-dropdown-link-active-bg: #8a4b24;
+}
+
+.list-group {
+  --bs-list-group-active-bg: #8a4b24;
+  --bs-list-group-active-border-color: #8a4b24;
+}
+
+.accordion {
+  --bs-accordion-active-bg: #f3e4d6;
+  --bs-accordion-active-color: #3a1e0e;
+  --bs-accordion-btn-focus-box-shadow: 0 0 0 0.25rem rgba(138, 75, 36, 0.25);
+  --bs-accordion-btn-active-icon: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='none' stroke='%233a1e0e' stroke-linecap='round' stroke-linejoin='round'%3e%3cpath d='m2 5 6 6 6-6'/%3e%3c/svg%3e");
+}
+
+.btn-close {
+  --bs-btn-close-focus-shadow: 0 0 0 0.25rem rgba(138, 75, 36, 0.25);
+}
+
+/* Фокус и выбранное состояние полей формы. */
+.form-control:focus,
+.form-select:focus,
+.form-check-input:focus {
+  border-color: #c4987a;
+  box-shadow: 0 0 0 0.25rem rgba(138, 75, 36, 0.25);
+}
+
+.form-check-input:checked {
+  background-color: #8a4b24;
+  border-color: #8a4b24;
+}
+
+.nav-link:focus-visible {
+  box-shadow: 0 0 0 0.25rem rgba(138, 75, 36, 0.25);
+}
+
 /* ===============================
    2. Типографика и общие элементы
    =============================== */
@@ -79,4 +117,79 @@ h3,
 /* Логотип в навбаре окрашивается цветом ссылки бренда. */
 .brand-logo {
   color: #e2c6ab;
+}
+
+/*
+  Навбар закреплён (sticky-top), поэтому при переходе по якорю
+  оставляем сверху место, чтобы он не закрывал заголовок раздела.
+*/
+html {
+  scroll-padding-top: 5rem;
+}
+
+/* ===============================
+   3. Карточки товаров
+   =============================== */
+
+/* Одинаковая пропорция изображений во всех карточках. */
+.product-card .card-img-top,
+.category-card .card-img-top {
+  aspect-ratio: 4 / 3;
+  object-fit: cover;
+  background-color: rgb(var(--bs-light-rgb));
+}
+
+.product-card,
+.category-card {
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.product-card:hover,
+.category-card:hover {
+  transform: translateY(-3px);
+  box-shadow: var(--bs-box-shadow) !important;
+}
+
+/* Модификатор: товара нет в наличии. */
+.product-card--sold-out .card-img-top {
+  opacity: 0.6;
+  filter: grayscale(1);
+}
+
+.product-card--sold-out:hover {
+  transform: none;
+}
+
+/* ===============================
+   4. Каталог и отзывы
+   =============================== */
+
+/* На широком экране фильтр каталога остаётся видимым при прокрутке. */
+@media (min-width: 992px) {
+  .catalog-sidebar {
+    position: sticky;
+    top: 5rem;
+  }
+}
+
+/* Место под стрелки и индикаторы карусели отзывов. */
+.reviews-carousel {
+  padding: 2.5rem 0 3.5rem;
+}
+
+/* Пользователь попросил систему уменьшить анимацию. */
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  .product-card,
+  .category-card {
+    transition: none;
+  }
+
+  .product-card:hover,
+  .category-card:hover {
+    transform: none;
+  }
 }

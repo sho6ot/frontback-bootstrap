@@ -24,22 +24,39 @@
 - сетка популярных товаров: `col-12 col-md-6 col-lg-4`, промежутки `g-4`;
 - подвал страницы на сетке.
 
+## Практическая работа 10
+
+Тема: «Страница на Bootstrap: компоненты».
+
+Выполнено:
+
+- единая Bootstrap-навигация `navbar` с выпадающим меню категорий на всех страницах;
+- страница каталога `catalog.html` на компонентах `card`;
+- страница товара `product.html`: `breadcrumb`, вкладки `tabs`, таблицы, `accordion`;
+- страница заявки `order.html`: форма на `form-control`, `form-select`, `input-group`, `form-check`;
+- страница контактов `contacts.html` с формой обратной связи и `accordion`;
+- модальное окно `modal` для быстрого заказа;
+- значки `badge`, сообщения `alert`, кнопки `btn`;
+- проверка форм в стиле Bootstrap (`needs-validation`, `invalid-feedback`) и уведомление `toast`;
+- файл `js/main.js` с логикой проекта.
+
 ## Используемые технологии
 
 - HTML;
 - Bootstrap 5.3.8;
 - CSS;
+- JavaScript;
 - Git;
 - GitHub.
 
 ## Структура проекта
 
-```text
-frontback-bootstrap/
-├── index.html
-├── css/
-│   └── custom.css
-├── images/
-├── README.md
-└── .gitignore
-```
+- `index.html` — главная страница;
+- `catalog.html` — каталог товаров;
+- `product.html` — страница товара;
+- `order.html` — форма заявки;
+- `contacts.html` — контакты и обратная связь;
+- `css/custom.css` — дополнительные стили проекта;
+- `js/main.js` — проверка форм, фильтр каталога, товар в модальном окне;
+- `images/` — изображения проекта;
+- `README.md` — описание проекта.
